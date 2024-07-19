@@ -1,0 +1,15 @@
+image: gitpod/workspace-full
+
+tasks:
+  - name: Setup, Install & Build
+    before: yarn global add express
+    init: yarn install
+    command: yarn build
+
+ports:
+  - port: 3000
+    onOpen: open-preview
+    name: Website
+    description: Website Preview
+    visibility: private
+    protocol: https
